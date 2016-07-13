@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reference &mdash; PyMzn 0.10.1 documentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="PyMzn 0.10.1 documentation" href="../index.html"/>
+        <link rel="next" title="pymzn.minizinc" href="minizinc/pymzn.minizinc.html"/>
+        <link rel="prev" title="Configuration" href="../config.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> PyMzn
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.10.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Install</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Quick Start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../config.html">Configuration</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-_mzn._minizinc">MiniZinc tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="minizinc/pymzn.minizinc.html">pymzn.minizinc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minizinc/pymzn.mzn2fzn.html">pymzn.mzn2fzn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="minizinc/pymzn.solns2out.html">pymzn.solns2out</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-_mzn._model">Modelling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="model/pymzn.MiniZincModel.html">pymzn.MiniZincModel</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-_mzn._solvers">Solvers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="solvers/pymzn.gecode.html">pymzn.gecode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solvers/pymzn.optimatsat.html">pymzn.optimatsat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="solvers/pymzn.solve.html">pymzn.solve</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-_dzn">Dzn files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dzn/pymzn.parse_dzn.html">pymzn.parse_dzn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dzn/pymzn.dzn.html">pymzn.dzn</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dzn/pymzn.dzn_value.html">pymzn.dzn_value</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dzn/pymzn.rebase_array.html">pymzn.rebase_array</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#errors">Errors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="errors/pymzn.MiniZincUnsatisfiableError.html">pymzn.MiniZincUnsatisfiableError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/pymzn.MiniZincUnknownError.html">pymzn.MiniZincUnknownError</a></li>
+<li class="toctree-l3"><a class="reference internal" href="errors/pymzn.MiniZincUnboundedError.html">pymzn.MiniZincUnboundedError</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">PyMzn</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Reference</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/index.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reference">
+<h1>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-_mzn._minizinc">
+<span id="minizinc-tools"></span><h2>MiniZinc tools<a class="headerlink" href="#module-_mzn._minizinc" title="Permalink to this headline">¶</a></h2>
+<p>PyMzn provides functions that mimic and enhance the tools from the libminizinc
+library. With those tools it is possible to compile a MiniZinc model into
+FlatZinc, solve a given problem and get the output solutions directly into the
+python code.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="minizinc/pymzn.minizinc.html#pymzn.minizinc" title="pymzn.minizinc"><code class="xref py py-obj docutils literal"><span class="pre">minizinc</span></code></a>(mzn,&nbsp;*dzn_files[,&nbsp;data,&nbsp;keep,&nbsp;...])</td>
+<td>Main function of the library.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="minizinc/pymzn.mzn2fzn.html#pymzn.mzn2fzn" title="pymzn.mzn2fzn"><code class="xref py py-obj docutils literal"><span class="pre">mzn2fzn</span></code></a>(mzn_file,&nbsp;*dzn_files[,&nbsp;data,&nbsp;...])</td>
+<td>Flatten a MiniZinc model into a FlatZinc one.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="minizinc/pymzn.solns2out.html#pymzn.solns2out" title="pymzn.solns2out"><code class="xref py py-obj docutils literal"><span class="pre">solns2out</span></code></a>(solns_input,&nbsp;ozn_file)</td>
+<td>Wraps the solns2out utility, executes it on the input solution stream, and then returns the output.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-_mzn._model">
+<span id="modelling"></span><h2>Modelling<a class="headerlink" href="#module-_mzn._model" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="model/pymzn.MiniZincModel.html#pymzn.MiniZincModel" title="pymzn.MiniZincModel"><code class="xref py py-obj docutils literal"><span class="pre">MiniZincModel</span></code></a>([mzn])</td>
+<td>Mutable class representing minizinc model.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-_mzn._solvers">
+<span id="solvers"></span><h2>Solvers<a class="headerlink" href="#module-_mzn._solvers" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="solvers/pymzn.gecode.html#pymzn.gecode" title="pymzn.gecode"><code class="xref py py-obj docutils literal"><span class="pre">gecode</span></code></a>(fzn_file,&nbsp;*[,&nbsp;time,&nbsp;parallel,&nbsp;...])</td>
+<td>Solves a constrained optimization problem using the Gecode solver, provided a .fzn input problem file.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="solvers/pymzn.optimatsat.html#pymzn.optimatsat" title="pymzn.optimatsat"><code class="xref py py-obj docutils literal"><span class="pre">optimatsat</span></code></a>(fzn_file)</td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="solvers/pymzn.solve.html#pymzn.solve" title="pymzn.solve"><code class="xref py py-obj docutils literal"><span class="pre">solve</span></code></a>(fzn_file[,&nbsp;solver_cmd])</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="module-_dzn">
+<span id="dzn-files"></span><h2>Dzn files<a class="headerlink" href="#module-_dzn" title="Permalink to this headline">¶</a></h2>
+<p>Utilities to convert Python objects into dzn format and back.</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="dzn/pymzn.parse_dzn.html#pymzn.parse_dzn" title="pymzn.parse_dzn"><code class="xref py py-obj docutils literal"><span class="pre">parse_dzn</span></code></a>(dzn,&nbsp;*[,&nbsp;rebase_arrays])</td>
+<td>Parse one or more pieces of dzn strings.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="dzn/pymzn.dzn.html#pymzn.dzn" title="pymzn.dzn"><code class="xref py py-obj docutils literal"><span class="pre">dzn</span></code></a>(objs[,&nbsp;fout])</td>
+<td>Serializes the objects in input and produces a list of strings encoding them into the dzn format.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="dzn/pymzn.dzn_value.html#pymzn.dzn_value" title="pymzn.dzn_value"><code class="xref py py-obj docutils literal"><span class="pre">dzn_value</span></code></a>(val)</td>
+<td>Serializes a value (bool, int, float, set, array) into its dzn representation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="dzn/pymzn.rebase_array.html#pymzn.rebase_array" title="pymzn.rebase_array"><code class="xref py py-obj docutils literal"><span class="pre">rebase_array</span></code></a>(d)</td>
+<td>Transform an indexed dictionary (such as those returned by the parse_dzn function when parsing arrays) into an multi-dimensional list.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="errors/pymzn.MiniZincUnsatisfiableError.html#pymzn.MiniZincUnsatisfiableError" title="pymzn.MiniZincUnsatisfiableError"><code class="xref py py-obj docutils literal"><span class="pre">MiniZincUnsatisfiableError</span></code></a>()</td>
+<td>Error raised when a minizinc problem is found to be unsatisfiable.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="errors/pymzn.MiniZincUnknownError.html#pymzn.MiniZincUnknownError" title="pymzn.MiniZincUnknownError"><code class="xref py py-obj docutils literal"><span class="pre">MiniZincUnknownError</span></code></a>()</td>
+<td>Error raised when minizinc returns no solution (unknown).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="errors/pymzn.MiniZincUnboundedError.html#pymzn.MiniZincUnboundedError" title="pymzn.MiniZincUnboundedError"><code class="xref py py-obj docutils literal"><span class="pre">MiniZincUnboundedError</span></code></a>()</td>
+<td>Error raised when a minizinc problem is found to be unbounded.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="minizinc/pymzn.minizinc.html" class="btn btn-neutral float-right" title="pymzn.minizinc" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../config.html" class="btn btn-neutral" title="Configuration" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Paolo Dragone.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.10.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
