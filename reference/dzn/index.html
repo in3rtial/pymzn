@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="PyMzn 0.10.1 documentation" href="../../index.html"/>
-        <link rel="up" title="Reference" href="../index.html"/>
+        <link rel="up" title="Manual" href="../index.html"/>
         <link rel="next" title="pymzn.parse_dzn" href="pymzn.parse_dzn.html"/>
         <link rel="prev" title="pymzn.MiniZincModel" href="../model/pymzn.MiniZincModel.html"/> 
 
@@ -85,7 +85,7 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quick_start.html">Quick Start</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manual</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../minizinc/index.html">MiniZinc tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../model/index.html">Modelling</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Dzn files</a><ul>
@@ -97,11 +97,11 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bin/index.html">Binary execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization.html">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal.html">Internal behavior</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../serialization.html">Serialization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
 </ul>
 
@@ -133,7 +133,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">Reference</a> &raquo;</li>
+          <li><a href="../index.html">Manual</a> &raquo;</li>
       
     <li>Dzn files</li>
       <li class="wy-breadcrumbs-aside">
@@ -158,7 +158,7 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pymzn.parse_dzn.html#pymzn.parse_dzn" title="pymzn.parse_dzn"><code class="xref py py-obj docutils literal"><span class="pre">parse_dzn</span></code></a>(dzn,&nbsp;*[,&nbsp;rebase_arrays])</td>
-<td>Parse a dzn string or file.</td>
+<td>Parse a dzn string or file into a Python dictionary of assignments.</td>
 </tr>
 <tr class="row-even"><td><a class="reference internal" href="pymzn.dzn.html#pymzn.dzn" title="pymzn.dzn"><code class="xref py py-obj docutils literal"><span class="pre">dzn</span></code></a>(objs[,&nbsp;fout])</td>
 <td>Serializes the objects in input and produces a list of strings encoding them into the dzn format.</td>
@@ -171,7 +171,7 @@
 </tr>
 </tbody>
 </table>
-<span class="target" id="module-_dzn"></span><p>PyMzn provides a set of functions to deal with dzn encoded strings and
+<span class="target" id="module-pymzn._dzn"></span><p>PyMzn provides a set of functions to deal with dzn encoded strings and
 files. Using these functions it is possible to serialize Python objects
 into dzn format and vice-versa. For instance, the <code class="docutils literal"><span class="pre">pymzn.dzn</span></code> function
 converts an assignment of variables (provided as a dictionary) into dzn

@@ -85,7 +85,7 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quick_start.html">Quick Start</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manual</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../minizinc/index.html">MiniZinc tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../model/index.html">Modelling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dzn/index.html">Dzn files</a></li>
@@ -96,11 +96,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bin/index.html">Binary execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization.html">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal.html">Internal behavior</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../serialization.html">Serialization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
 </ul>
 
@@ -132,7 +132,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">Reference</a> &raquo;</li>
+          <li><a href="../index.html">Manual</a> &raquo;</li>
       
           <li><a href="index.html">Solvers</a> &raquo;</li>
       
@@ -154,8 +154,32 @@
 <h1>pymzn.solve<a class="headerlink" href="#pymzn-solve" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="pymzn.solve">
-<code class="descclassname">pymzn.</code><code class="descname">solve</code><span class="sig-paren">(</span><em>fzn_file</em>, <em>solver_cmd=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pymzn.solve" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descclassname">pymzn.</code><code class="descname">solve</code><span class="sig-paren">(</span><em>fzn_file</em>, <em>*</em>, <em>solver_cmd=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pymzn.solve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generic proxy function to a solver.</p>
+<p>This function provides a simple interface to a solver.
+It does not provide any argument to the solver, so it can be used to only
+execute the solver as is on the input fnz file.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>fzn_file</strong> (<em>str</em>) &#8211; The path to the fzn file containing the problem to
+be solved</li>
+<li><strong>solver_cmd</strong> &#8211; The path to the command to execute the solver</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A string containing the solution output stream of the execution
+of the solver on the specified problem</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </div>
 

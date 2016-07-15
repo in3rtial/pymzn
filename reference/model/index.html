@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="PyMzn 0.10.1 documentation" href="../../index.html"/>
-        <link rel="up" title="Reference" href="../index.html"/>
+        <link rel="up" title="Manual" href="../index.html"/>
         <link rel="next" title="pymzn.MiniZincModel" href="pymzn.MiniZincModel.html"/>
         <link rel="prev" title="pymzn.MiniZincUnboundedError" href="../minizinc/pymzn.MiniZincUnboundedError.html"/> 
 
@@ -85,7 +85,7 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quick_start.html">Quick Start</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Manual</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../minizinc/index.html">MiniZinc tools</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Modelling</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pymzn.MiniZincModel.html">pymzn.MiniZincModel</a></li>
@@ -94,11 +94,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../dzn/index.html">Dzn files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../bin/index.html">Binary execution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../serialization.html">Serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../internal.html">Implementation details</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../serialization.html">Serialization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
 </ul>
 
@@ -130,7 +130,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../../index.html">Docs</a> &raquo;</li>
       
-          <li><a href="../index.html">Reference</a> &raquo;</li>
+          <li><a href="../index.html">Manual</a> &raquo;</li>
       
     <li>Modelling</li>
       <li class="wy-breadcrumbs-aside">
@@ -155,11 +155,11 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference internal" href="pymzn.MiniZincModel.html#pymzn.MiniZincModel" title="pymzn.MiniZincModel"><code class="xref py py-obj docutils literal"><span class="pre">MiniZincModel</span></code></a>([mzn])</td>
-<td>Mutable class representing minizinc model.</td>
+<td>Mutable class representing a MiniZinc model.</td>
 </tr>
 </tbody>
 </table>
-<span class="target" id="module-_mzn._model"></span><p>PyMzn can also be used to dynamically change a model during runtime. For
+<span class="target" id="module-pymzn._mzn._model"></span><p>PyMzn can also be used to dynamically change a model during runtime. For
 example, it can be useful to add constraints incrementally or change the
 solving statement dynamically. To modify dynamically a model, you can
 use the class <code class="docutils literal"><span class="pre">MiniZincModel</span></code>, which can take an optional model file
