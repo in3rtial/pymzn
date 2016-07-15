@@ -85,7 +85,6 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quick_start.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">MiniZinc tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pymzn.minizinc.html">pymzn.minizinc</a></li>
@@ -94,7 +93,6 @@
 <li class="toctree-l3"><a class="reference internal" href="pymzn.MiniZincUnsatisfiableError.html">pymzn.MiniZincUnsatisfiableError</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pymzn.MiniZincUnknownError.html">pymzn.MiniZincUnknownError</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pymzn.MiniZincUnboundedError.html">pymzn.MiniZincUnboundedError</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#serialization">Serialization</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../model/index.html">Modelling</a></li>
@@ -103,6 +101,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../bin/index.html">Binary execution</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../serialization.html">Serialization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -195,29 +195,6 @@ but the <code class="docutils literal"><span class="pre">mzn2fzn</span></code> a
 for maximum flexibility. The latter two functions are wrappers of the two
 homonym MiniZinc tools for, respectively, converting a MiniZinc model into a
 FlatZinc one and getting custom output from the solution stream of a solver.</p>
-<div class="section" id="serialization">
-<h2>Serialization<a class="headerlink" href="#serialization" title="Permalink to this headline">¶</a></h2>
-<p>Another important aspect that PyMzn addresses is the &#8220;isolation&#8221; of
-solving instances of a problem. This problem arises when there are
-multiple solving instances of the same problem file running in parallel.
-This is especially important when the problems are continuously solved
-in separate threads. PyMzn can be set to make sure that the instances do
-not interfere with each other, by setting the argument
-<code class="docutils literal"><span class="pre">serialize=True</span></code> in the <code class="docutils literal"><span class="pre">minizinc</span></code> function. For instance:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">threading</span>
-
-<span class="n">solutions</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="k">def</span> <span class="nf">solve</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="n">solutions</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">pymzn</span><span class="o">.</span><span class="n">minizinc</span><span class="p">(</span><span class="s1">&#39;test.mzn&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;n&#39;</span><span class="p">:</span> <span class="n">n</span><span class="p">},</span> <span class="n">serialize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">threading</span><span class="o">.</span><span class="n">Thread</span><span class="p">(</span><span class="n">target</span><span class="o">=</span><span class="n">solve</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="n">n</span><span class="p">,))</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-</pre></div>
-</div>
-<p>Setting <code class="docutils literal"><span class="pre">serialize=True</span></code> in each solving instance will prevent all the
-instances from interfering with each other.</p>
-</div>
 </div>
 
 

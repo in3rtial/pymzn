@@ -83,8 +83,9 @@
                 <ul>
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -133,9 +134,12 @@
             
   <div class="section" id="pymzn">
 <h1>PyMzn<a class="headerlink" href="#pymzn" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to the documentation of the PyMzn project.
-PyMzn is a Python library that wraps and enhances the
-<a class="reference external" href="http://minzinc.org">MiniZinc</a> tools for CSP modelling and solving.</p>
+<p>Welcome to the documentation of the PyMzn project.</p>
+<p>PyMzn is a Python library that wraps and enhances the
+<a class="reference external" href="http://minzinc.org">MiniZinc</a> tools for CSP modelling and solving.
+It is built on top of the libminizinc library (version 2.0)
+and provides a number of off-the-shelf functions to readily solve problems
+encoded in MiniZinc and parse the solutions into Python objects.</p>
 <p><a class="reference external" href="https://github.com/paolodragone/pymzn">GitHub repository</a></p>
 </div>
 <div class="section" id="table-of-contents">
@@ -152,7 +156,6 @@ PyMzn is a Python library that wraps and enhances the
 <li class="toctree-l2"><a class="reference internal" href="quick_start.html#solver-s-arguments">Solver&#8217;s arguments</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="reference/minizinc/index.html">MiniZinc tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/model/index.html">Modelling</a></li>
@@ -161,6 +164,8 @@ PyMzn is a Python library that wraps and enhances the
 <li class="toctree-l2"><a class="reference internal" href="reference/bin/index.html">Binary execution</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="internal.html">Internal behavior</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="internal.html#binary-execution">Binary execution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="internal.html#model-flattening">Model flattening</a></li>

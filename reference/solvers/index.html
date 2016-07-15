@@ -85,7 +85,6 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../quick_start.html">Quick Start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Reference</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../minizinc/index.html">MiniZinc tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../model/index.html">Modelling</a></li>
@@ -99,6 +98,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../bin/index.html">Binary execution</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../serialization.html">Serialization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -166,10 +167,13 @@
 </tr>
 </tbody>
 </table>
-<span class="target" id="module-_mzn._solvers"></span><p>If you want to use a different solver other than Gecode, you first need
-to make sure that it supports the FlatZinc input. To solve your model
-through PyMzn using the selected solver, you need to use a proxy
-function. PyMzn provides natively a number of solvers proxy functions.
+<span class="target" id="module-_mzn._solvers"></span><p>PyMzn interfaces with solvers through <em>proxy</em> functions. Proxy functions
+executes a solver with the given arguments on the provided FlatZinc model.
+PyMzn&#8217;s default solver is Gecode, which proxy function is <cite>pymzn.gecode</cite>.</p>
+<p>If you want to use a different solver other than Gecode, you first need
+to make sure that it supports the FlatZinc input format, then you need to find
+an appropriate proxy function if it exists, otherwise you can implement one by
+yourself. PyMzn provides natively a number of solvers proxy functions.
 If the solver your solver is not supported natively, you can use the
 generic proxy function <code class="docutils literal"><span class="pre">pymzn.solve</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">pymzn</span><span class="o">.</span><span class="n">minizinc</span><span class="p">(</span><span class="s1">&#39;test.mzn&#39;</span><span class="p">,</span> <span class="n">fzn_fn</span><span class="o">=</span><span class="n">pymzn</span><span class="o">.</span><span class="n">solve</span><span class="p">,</span> <span class="n">solver_cmd</span><span class="o">=</span><span class="s1">&#39;path/to/solver&#39;</span><span class="p">)</span>

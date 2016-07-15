@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="PyMzn 0.10.1 documentation" href="index.html"/>
-        <link rel="next" title="Reference" href="reference/index.html"/>
-        <link rel="prev" title="Quick Start" href="quick_start.html"/> 
+        <link rel="next" title="Serialization" href="serialization.html"/>
+        <link rel="prev" title="pymzn.bin.run" href="reference/bin/pymzn.bin.run.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -84,8 +84,9 @@
                 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="install.html">Install</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quick_start.html">Quick Start</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -146,6 +147,32 @@ you can set their values through the <code class="docutils literal"><span class=
 <p>These settings persist throughout the execution of your application. The
 <code class="docutils literal"><span class="pre">pymzn.config</span></code> module provides access to all the static settings of
 PyMzn.</p>
+<dl class="docutils">
+<dt>The configuration properties provided by <code class="docutils literal"><span class="pre">pymzn.config</span></code> are:</dt>
+<dd><ul class="first last">
+<li><p class="first">mzn2fzn_cmd: Path to the MiniZinc <em>mzn2fzn</em> utility command executable;</p>
+</li>
+<li><p class="first">solns2out_cmd: Path to the MiniZinc <em>solns2out</em> utility command executable;</p>
+</li>
+<li><p class="first">gecode_cmd: Path to the Gecode <em>fzn-gecode</em> utility command executable;</p>
+</li>
+<li><dl class="first docutils">
+<dt>optimatsat_cmd: Path to the OptiMatSat <em>optimatsat</em> utility command</dt>
+<dd><p class="first last">executable;</p>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>cmd_arg_limit: The limit of characters for command line arguments; This</dt>
+<dd><p class="first last">property is used to decide whether to provide inline data
+as a shell argument to mzn2fzn or to write it automatically
+on a dzn file if the limit is exceeded.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
 <p>PyMzn can also be set to print debugging messages on standard output
 via:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">pymzn</span><span class="o">.</span><span class="n">debug</span><span class="p">()</span>
@@ -159,17 +186,6 @@ disable debugging messages you can then call:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">pymzn</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
 </div>
-<dl class="docutils">
-<dt>Provides configuration variables:</dt>
-<dd><ul class="first last simple">
-<li>mzn2fzn_cmd: ...</li>
-<li>solns2out_cmd: ...</li>
-<li>gecode_cmd: ...</li>
-<li>optimatsat_cmd: ...</li>
-<li>cmd_arg_limit: ...</li>
-</ul>
-</dd>
-</dl>
 </div>
 
 
@@ -179,10 +195,10 @@ disable debugging messages you can then call:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="reference/index.html" class="btn btn-neutral float-right" title="Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="serialization.html" class="btn btn-neutral float-right" title="Serialization" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="quick_start.html" class="btn btn-neutral" title="Quick Start" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="reference/bin/pymzn.bin.run.html" class="btn btn-neutral" title="pymzn.bin.run" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

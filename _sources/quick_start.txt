@@ -94,7 +94,7 @@ Usually, solvers provide arguments that can be used to modify their
 behavior. You can specify arguments to pass to the solver as additional
 keyword arguments in the ``minizinc`` function. For instance, using the
 argument ``time`` for Gecode, it will set a time cut-off (in
-milliseconds) for the problem solving.
+milliseconds) for the problem solving:
 
 ::
 

@@ -31,7 +31,7 @@
 
   
     <link rel="top" title="PyMzn 0.10.1 documentation" href="index.html"/>
-        <link rel="next" title="Configuration" href="config.html"/>
+        <link rel="next" title="Reference" href="reference/index.html"/>
         <link rel="prev" title="Install" href="install.html"/> 
 
   
@@ -88,8 +88,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#solver-s-arguments">Solver&#8217;s arguments</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="serialization.html">Serialization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="internal.html">Internal behavior</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a></li>
 </ul>
@@ -215,7 +216,7 @@ section).</p>
 behavior. You can specify arguments to pass to the solver as additional
 keyword arguments in the <code class="docutils literal"><span class="pre">minizinc</span></code> function. For instance, using the
 argument <code class="docutils literal"><span class="pre">time</span></code> for Gecode, it will set a time cut-off (in
-milliseconds) for the problem solving.</p>
+milliseconds) for the problem solving:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">pymzn</span><span class="o">.</span><span class="n">minizinc</span><span class="p">(</span><span class="s1">&#39;test.mzn&#39;</span><span class="p">,</span> <span class="n">time</span><span class="o">=</span><span class="mi">30000</span><span class="p">)</span>  <span class="c1"># 30 seconds cut-off</span>
 </pre></div>
 </div>
@@ -236,7 +237,7 @@ section.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="config.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="reference/index.html" class="btn btn-neutral float-right" title="Reference" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="install.html" class="btn btn-neutral" title="Install" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
