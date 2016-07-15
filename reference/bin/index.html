@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pymzn.gecode &mdash; PyMzn 0.10.1 documentation</title>
+  <title>Binary execution &mdash; PyMzn 0.10.1 documentation</title>
   
 
   
@@ -31,9 +31,9 @@
 
   
     <link rel="top" title="PyMzn 0.10.1 documentation" href="../../index.html"/>
-        <link rel="up" title="Solvers" href="index.html"/>
-        <link rel="next" title="pymzn.optimatsat" href="pymzn.optimatsat.html"/>
-        <link rel="prev" title="Solvers" href="index.html"/> 
+        <link rel="up" title="Reference" href="../index.html"/>
+        <link rel="next" title="pymzn.bin.cmd" href="pymzn.bin.cmd.html"/>
+        <link rel="prev" title="pymzn.solve" href="../solvers/pymzn.solve.html"/> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
@@ -90,13 +90,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../minizinc/index.html">MiniZinc tools</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../model/index.html">Modelling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dzn/index.html">Dzn files</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Solvers</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">pymzn.gecode</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pymzn.optimatsat.html">pymzn.optimatsat</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pymzn.solve.html">pymzn.solve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../solvers/index.html">Solvers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Binary execution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pymzn.bin.cmd.html">pymzn.bin.cmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pymzn.bin.run.html">pymzn.bin.run</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../bin/index.html">Binary execution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../internal.html">Internal behavior</a></li>
@@ -133,13 +132,11 @@
       
           <li><a href="../index.html">Reference</a> &raquo;</li>
       
-          <li><a href="index.html">Solvers</a> &raquo;</li>
-      
-    <li>pymzn.gecode</li>
+    <li>Binary execution</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../../_sources/reference/solvers/pymzn.gecode.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/reference/bin/index.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -149,56 +146,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="pymzn-gecode">
-<h1>pymzn.gecode<a class="headerlink" href="#pymzn-gecode" title="Permalink to this headline">¶</a></h1>
-<dl class="function">
-<dt id="pymzn.gecode">
-<code class="descclassname">pymzn.</code><code class="descname">gecode</code><span class="sig-paren">(</span><em>fzn_file</em>, <em>*</em>, <em>time=0</em>, <em>parallel=1</em>, <em>n_solns=-1</em>, <em>seed=0</em>, <em>restart=None</em>, <em>restart_base=None</em>, <em>restart_scale=None</em>, <em>suppress_segfault=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pymzn.gecode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Solves a constrained optimization problem using the Gecode solver,
-provided a .fzn input problem file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
+  <div class="section" id="binary-execution">
+<h1>Binary execution<a class="headerlink" href="#binary-execution" title="Permalink to this headline">¶</a></h1>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>fzn_file</strong> (<em>str</em>) &#8211; The path to the fzn file containing the problem to
-be solved</li>
-<li><strong>n_solns</strong> (<em>int</em>) &#8211; The number of solutions to output (0 = all,
--1 = one/best); default is -1</li>
-<li><strong>parallel</strong> (<em>int</em>) &#8211; The number of threads to use to solve the problem
-(0 = #processing units); default is 1</li>
-<li><strong>time</strong> (<em>int</em>) &#8211; The time cutoff in milliseconds, after which the
-execution is truncated and the best solution so far is
-returned, 0 means no time cutoff; default is 0</li>
-<li><strong>seed</strong> (<em>int</em>) &#8211; random seed; default is 0</li>
-<li><strong>restart</strong> (<em>str</em>) &#8211; restart sequence type; default is None</li>
-<li><strong>restart_base</strong> (<em>str</em>) &#8211; base for geometric restart sequence; if None (
-default) the default value of Gecode is used,
-which is 1.5</li>
-<li><strong>restart_scale</strong> (<em>str</em>) &#8211; scale factor for restart sequence; if None (
-default) the default value of Gecode is used,
-which is 250</li>
-<li><strong>suppress_segfault</strong> (<em>bool</em>) &#8211; whether to accept or not a solution
-returned when a segmentation fault has
-happened (this is unfortunately necessary
-sometimes due to some bugs in gecode).</li>
-</ul>
-</td>
+<tr class="row-odd"><td><a class="reference internal" href="pymzn.bin.cmd.html#pymzn.bin.cmd" title="pymzn.bin.cmd"><code class="xref py py-obj docutils literal"><span class="pre">bin.cmd</span></code></a>(path,&nbsp;args)</td>
+<td>Returns the command string from the path to the binary with the provided arguments.</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A string containing the solution output stream of the execution
-of Gecode on the specified problem; it can be directly be given
-to the function solns2out to be transformed into output and
-then parsed</p>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">str</p>
-</td>
+<tr class="row-even"><td><a class="reference internal" href="pymzn.bin.run.html#pymzn.bin.run" title="pymzn.bin.run"><code class="xref py py-obj docutils literal"><span class="pre">bin.run</span></code></a>(arg[,&nbsp;stdin])</td>
+<td>Executes a shell command and waits for the result.</td>
 </tr>
 </tbody>
 </table>
-</dd></dl>
-
-</div>
+<span class="target" id="module-bin"></span></div>
 
 
            </div>
@@ -207,10 +171,10 @@ then parsed</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="pymzn.optimatsat.html" class="btn btn-neutral float-right" title="pymzn.optimatsat" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="pymzn.bin.cmd.html" class="btn btn-neutral float-right" title="pymzn.bin.cmd" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Solvers" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../solvers/pymzn.solve.html" class="btn btn-neutral" title="pymzn.solve" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
