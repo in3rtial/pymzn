@@ -147,32 +147,19 @@ you can set their values through the <code class="docutils literal"><span class=
 <p>These settings persist throughout the execution of your application. The
 <code class="docutils literal"><span class="pre">pymzn.config</span></code> module provides access to all the static settings of
 PyMzn.</p>
-<dl class="docutils">
-<dt>The configuration properties provided by <code class="docutils literal"><span class="pre">pymzn.config</span></code> are:</dt>
-<dd><ul class="first last">
-<li><p class="first">mzn2fzn_cmd: Path to the MiniZinc <em>mzn2fzn</em> utility command executable;</p>
-</li>
-<li><p class="first">solns2out_cmd: Path to the MiniZinc <em>solns2out</em> utility command executable;</p>
-</li>
-<li><p class="first">gecode_cmd: Path to the Gecode <em>fzn-gecode</em> utility command executable;</p>
-</li>
-<li><dl class="first docutils">
-<dt>optimatsat_cmd: Path to the OptiMatSat <em>optimatsat</em> utility command</dt>
-<dd><p class="first last">executable;</p>
-</dd>
-</dl>
-</li>
-<li><dl class="first docutils">
-<dt>cmd_arg_limit: The limit of characters for command line arguments; This</dt>
-<dd><p class="first last">property is used to decide whether to provide inline data
-as a shell argument to mzn2fzn or to write it automatically
-on a dzn file if the limit is exceeded.</p>
-</dd>
-</dl>
-</li>
+<p>The configuration properties provided by <code class="docutils literal"><span class="pre">pymzn.config</span></code> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li>mzn2fzn_cmd: Path to the MiniZinc <em>mzn2fzn</em> utility command executable;</li>
+<li>solns2out_cmd: Path to the MiniZinc <em>solns2out</em> utility command executable;</li>
+<li>gecode_cmd: Path to the Gecode <em>fzn-gecode</em> utility command executable;</li>
+<li>optimatsat_cmd: Path to the OptiMatSat <em>optimatsat</em> utility command executable;</li>
+<li>cmd_arg_limit: The limit of characters for command line arguments;
+This property is used to decide whether to provide inline data as a shell
+argument to mzn2fzn or to write it automatically on a dzn file if the limit
+is exceeded.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <p>PyMzn can also be set to print debugging messages on standard output
 via:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">pymzn</span><span class="o">.</span><span class="n">debug</span><span class="p">()</span>
