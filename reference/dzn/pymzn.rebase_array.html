@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>pymzn.rebase_array &mdash; PyMzn 0.10.1 documentation</title>
+  <title>pymzn.rebase_array &mdash; PyMzn 0.10.3a1 documentation</title>
   
 
   
@@ -30,7 +30,7 @@
   
 
   
-    <link rel="top" title="PyMzn 0.10.1 documentation" href="../../index.html"/>
+    <link rel="top" title="PyMzn 0.10.3a1 documentation" href="../../index.html"/>
         <link rel="up" title="Dzn files" href="index.html"/>
         <link rel="next" title="Solvers" href="../solvers/index.html"/>
         <link rel="prev" title="pymzn.dzn_value" href="pymzn.dzn_value.html"/> 
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.10.1
+                0.10
               </div>
             
           
@@ -155,18 +155,24 @@
 <h1>pymzn.rebase_array<a class="headerlink" href="#pymzn-rebase-array" title="Permalink to this headline">¶</a></h1>
 <dl class="function">
 <dt id="pymzn.rebase_array">
-<code class="descclassname">pymzn.</code><code class="descname">rebase_array</code><span class="sig-paren">(</span><em>d</em><span class="sig-paren">)</span><a class="headerlink" href="#pymzn.rebase_array" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">pymzn.</code><code class="descname">rebase_array</code><span class="sig-paren">(</span><em>d</em>, <em>recursive=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pymzn.rebase_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Transform an indexed dictionary (such as those returned by the parse_dzn
 function when parsing arrays) into an multi-dimensional list.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>d</strong> (<em>dict</em>) &#8211; The indexed dictionary to convert</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>d</strong> (<em>dict</em>) &#8211; The indexed dictionary to convert</li>
+<li><strong>recursive</strong> (<em>bool</em>) &#8211; Whether to rebase the array recursively</li>
+</ul>
+</td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">A multi-dimensional list</td>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">A multi-dimensional list</p>
+</td>
 </tr>
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">list</td>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">list</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -215,7 +221,7 @@ function when parsing arrays) into an multi-dimensional list.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
-            VERSION:'0.10.1',
+            VERSION:'0.10.3a1',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true
